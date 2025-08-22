@@ -43,3 +43,4 @@ $usuario1 = new Usuario
 $usuario2 = new Usuario("Valentina Passos Scherrer","070.070.060-70", "Feminino", "scherrer.valen@outlook.com", "Divorciada","Iracemapolis", "São Paulo", "Avenida da saudade, 1942", "23456-24");
 
 $usuario2 = new Usuario("Claudio Braz Nepumoceno", "575.575.242-32", "Masculino", "Clauclau.nepumoceno@gmail.com", "Solteiro", "Piripiri", "Piauí", "Estrada 3 33","12345-99");
+
