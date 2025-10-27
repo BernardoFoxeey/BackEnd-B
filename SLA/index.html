@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inserindo Dados</title>
+  <style>
+    /* ======== RESET E BASE ======== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(-45deg, #00c6ff, #0072ff, #7a00ff, #ff00c8);
+      background-size: 400% 400%;
+      animation: gradientBG 10s ease infinite;
+      color: #fff;
+    }
+
+    /* ======== CONTAINER ======== */
+    form {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+      padding: 40px 50px;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+      width: 320px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    form:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 40px rgba(255, 255, 255, 0.2);
+    }
+
+    /* ======== TÍTULO ======== */
+    form::before {
+      content: "Formulário";
+      display: block;
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-bottom: 25px;
+      color: #fff;
+      letter-spacing: 1px;
+    }
+
+    /* ======== LABEL E INPUT ======== */
+    label {
+      display: block;
+      text-align: left;
+      margin: 15px 0 5px;
+      font-weight: 500;
+      color: #e0e0e0;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.2);
+      color: #fff;
+      outline: none;
+      font-size: 1rem;
+      transition: background 0.3s, box-shadow 0.3s;
+    }
+
+    input::placeholder {
+      color: #ccc;
+    }
+
+    input:focus {
+      background: rgba(255, 255, 255, 0.35);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    }
+
+    /* ======== BOTÃO ======== */
+    button {
+      margin-top: 25px;
+      width: 100%;
+      padding: 12px;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(90deg, #00c6ff, #0072ff);
+      color: #fff;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background: linear-gradient(90deg, #7a00ff, #ff00c8);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+    }
+
+    /* ======== ANIMAÇÃO DO FUNDO ======== */
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+  </style>
+</head>
+<body>
+  <form action="edit.php" method="POST">
+    <label>Nome:</label>
+    <input type="text" name="nome" placeholder="Digite seu nome" required><br>
+    <label>Email:</label>
+    <input type="email" name="email" placeholder="Digite seu email" required><br>
+    <button type="submit">Enviar</button>
+  </form>
+</body>
+</html>
