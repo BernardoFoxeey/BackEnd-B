@@ -8,7 +8,6 @@ use Bebidas;
 require_once __DIR__ . '/../Model/BebidaDAO.php';
 require_once __DIR__ . '/../Model/Bebidas.php';
 
-
 class BebidaController {
     private $dao;
 
@@ -25,8 +24,8 @@ class BebidaController {
         $this->dao->criarBebida($bebida);
     }
 
-    public function atualizar($nome, $categoria, $volume, $valor, $qtde) {
-        $this->dao->atualizarBebida($nome, $categoria, $volume, $valor, $qtde);
+    public function atualizar($nomeAntigo, $novoNome, $categoria, $volume, $valor, $qtde) {
+        $this->dao->atualizarBebida($nomeAntigo, $novoNome, $categoria, $volume, $valor, $qtde);
     }
 
     public function deletar($nome) {
